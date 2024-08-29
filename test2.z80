@@ -1,0 +1,17 @@
+org 0x0
+
+    ld c,0
+loop1:
+    inc b
+    ld a,(looplen)
+    cp b
+    jp nz, loop1
+loop2:
+    inc c
+    ld hl,(ardAddr)
+    ld (hl),c
+    ld b,0
+    jp loop1
+    
+ardAddr: defw $0078
+looplen: defb $4

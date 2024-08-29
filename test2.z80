@@ -1,5 +1,4 @@
 org 0x0
-
     ld c,0
 loop1:
     inc b
@@ -13,5 +12,5 @@ loop2:
     ld b,0
     jp loop1
     
-ardAddr: defw $0078
+ardAddr: defw $8000
 looplen: defb $4
